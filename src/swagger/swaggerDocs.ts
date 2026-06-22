@@ -13,7 +13,11 @@ const options = {
     servers: [
       {
         url: `http://localhost:${envVars.port}`,
-        description: "Development server",
+        description: "Local server",
+      },
+      {
+        url: "https://metasoftware-task-je7usqzhv-abdullah-mahrous-projects.vercel.app",
+        description: "Production server",
       },
     ],
     components: {
