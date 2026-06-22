@@ -41,6 +41,9 @@ console.log(
   fs.existsSync("/var/task/src/routes/posts.routes.ts")
 );
 
+console.log(API_SPECS);
+
+
 if (fs.existsSync("/var/task/src/routes/posts.routes.ts")) {
   const content = fs.readFileSync(
     "/var/task/src/routes/posts.routes.ts",
