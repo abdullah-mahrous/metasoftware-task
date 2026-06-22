@@ -168,7 +168,7 @@ http://localhost:3000/api-docs
 Vercel Deployment:
 
 ```txt
-<your-vercel-url>
+https://metasoftware-task.vercel.app
 ```
 
 ## Author
