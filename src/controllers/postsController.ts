@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import Post from "../models/Post";
 import { appError } from "../utilities/appError";
 
-export const getAllPosts = async (req: Request, res: Response, next: NextFunction) => {
+export const getAllPosts = async (_req: Request, res: Response, next: NextFunction) => {
     try{
         const posts = await Post.find().populate("author", "name emial").sort({createdAt: -1});
 

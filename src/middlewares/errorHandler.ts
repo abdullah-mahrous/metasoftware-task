@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response } from "express";
 
-const errorHandler = ( err: any, req: Request, res: Response, next: NextFunction ) => {
+const errorHandler = ( err: any, _req: Request, res: Response ) => {
     console.log(err.message);
 
     if (err.code === 11000) {
@@ -12,7 +12,7 @@ const errorHandler = ( err: any, req: Request, res: Response, next: NextFunction
 
     const statusCode = err.statusCode || 500;
 
-    res.status(statusCode).json({
+    return res.status(statusCode).json({
         success: false,
         message: err.message || "Internal server error",
     });

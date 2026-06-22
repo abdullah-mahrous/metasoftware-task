@@ -2,7 +2,7 @@ import { ZodType } from "zod";
 import { Request, Response, NextFunction } from "express"
 import { appError } from "../utilities/appError";
 
-const validation = (validationSchema: ZodType) => (req: Request, res: Response, next: NextFunction) => {
+const validation = (validationSchema: ZodType) => (req: Request, _res: Response, next: NextFunction) => {
     const result = validationSchema.safeParse(req.body);
 
     if(!result.success) {
