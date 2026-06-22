@@ -1,3 +1,4 @@
+import path from "path";
 import swaggerJsdoc from "swagger-jsdoc";
 import envVars from "../config/environment";
 
@@ -16,7 +17,7 @@ const options = {
         description: "Local server",
       },
       {
-        url: "https://metasoftware-task.vercel.app/",
+        url: "https://metasoftware-task.vercel.app",
         description: "Production server",
       },
     ],
@@ -30,9 +31,13 @@ const options = {
       },
     },
   },
-  apis: ["./src/routes/*.ts"],
+  apis: [path.join(process.cwd(), "src/routes/*.ts")],
 };
 
+console.log(process.cwd());
+
 const API_SPECS = swaggerJsdoc(options);
+
+console.log(JSON.stringify(API_SPECS, null, 2));
 
 export default API_SPECS;
