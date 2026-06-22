@@ -16,7 +16,7 @@ const options = {
         description: "Local server",
       },
       {
-        url: "https://metasoftware-task-je7usqzhv-abdullah-mahrous-projects.vercel.app",
+        url: "https://metasoftware-task.vercel.app/",
         description: "Production server",
       },
     ],
