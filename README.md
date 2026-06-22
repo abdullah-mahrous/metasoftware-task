@@ -167,7 +167,7 @@ http://localhost:3000/api-docs
 
 Railway Deployment:
 
-[https://metasoftware-task-production-64e8.up.railway.app](https://metasoftware-task-production-64e8.up.railway.app)
+[https://metasoftware-task-production-64e8.up.railway.app/api-docs](https://metasoftware-task-production-64e8.up.railway.app)
 
 ## Author
 
