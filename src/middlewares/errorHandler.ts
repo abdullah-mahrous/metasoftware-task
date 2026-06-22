@@ -1,6 +1,6 @@
-import { Request, Response } from "express";
+import { Request, Response, NextFunction } from "express";
 
-const errorHandler = ( err: any, _req: Request, res: Response ) => {
+const errorHandler = ( err: any, _req: Request, res: Response, _next: NextFunction ) => {
     console.log(err.message);
 
     if (err.code === 11000) {

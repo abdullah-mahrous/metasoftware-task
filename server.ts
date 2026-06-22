@@ -10,7 +10,7 @@ const startServer = async () => {
     // Start server
     app.listen(envVars.port, () => {
       console.log(`Server running on port ${envVars.port}`);
-      console.log(`API Documentation: http://localhost:${envVars.port}/api-docs`);
+      console.log(`API Documentation: https://metasoftware-task-production-64e8.up.railway.app/api-docs`);
     });
 
     // Graceful shutdown on signal interrupt
