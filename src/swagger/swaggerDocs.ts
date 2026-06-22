@@ -20,36 +20,6 @@ const options = {
         description: "Production server",
       },
     ],
-    paths: {
-  "/api/test": {
-    get: {
-      summary: "Test endpoint",
-      tags: ["Test"],
-      responses: {
-        200: {
-          description: "Success",
-          content: {
-            "application/json": {
-              schema: {
-                type: "object",
-                properties: {
-                  success: {
-                    type: "boolean",
-                    example: true
-                  },
-                  message: {
-                    type: "string",
-                    example: "Swagger is working"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-},
     components: {
       securitySchemes: {
         bearerAuth: {
@@ -64,23 +34,5 @@ const options = {
 };
 
 const API_SPECS = swaggerJsdoc(options);
-
-import fs from "fs";
-
-console.log(
-  fs.existsSync("/var/task/src/routes/posts.routes.ts")
-);
-
-console.log(API_SPECS);
-
-
-if (fs.existsSync("/var/task/src/routes/posts.routes.ts")) {
-  const content = fs.readFileSync(
-    "/var/task/src/routes/posts.routes.ts",
-    "utf8"
-  );
-
-  console.log(content.substring(0, 1500));
-}
 
 export default API_SPECS;
