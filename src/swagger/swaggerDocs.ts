@@ -35,9 +35,19 @@ const options = {
 
 const API_SPECS = swaggerJsdoc(options);
 
-console.log("Swagger loaded");
-console.log(API_SPECS);
-console.log(process.cwd());
-console.log(__dirname);
+import fs from "fs";
+
+console.log(
+  fs.existsSync("/var/task/src/routes/posts.routes.ts")
+);
+
+if (fs.existsSync("/var/task/src/routes/posts.routes.ts")) {
+  const content = fs.readFileSync(
+    "/var/task/src/routes/posts.routes.ts",
+    "utf8"
+  );
+
+  console.log(content.substring(0, 1500));
+}
 
 export default API_SPECS;
