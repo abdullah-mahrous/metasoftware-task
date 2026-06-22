@@ -12,12 +12,12 @@ const options = {
     },
     servers: [
       {
-        url: `http://localhost:${envVars.port}`,
-        description: "Local server",
+        url: "https://metasoftware-task-production-64e8.up.railway.app/",
+        description: "Production server",
       },
       {
-        url: "https://metasoftware-task.vercel.app",
-        description: "Production server",
+        url: `http://localhost:${envVars.port}`,
+        description: "Local server",
       },
     ],
     components: {
