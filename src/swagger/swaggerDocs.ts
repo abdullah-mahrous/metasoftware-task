@@ -1,4 +1,3 @@
-import path from "path";
 import swaggerJsdoc from "swagger-jsdoc";
 import envVars from "../config/environment";
 
@@ -31,13 +30,14 @@ const options = {
       },
     },
   },
-  apis: [path.join(process.cwd(), "src/routes/*.ts")],
+  apis: ["./src/routes/*.ts"],
 };
-
-console.log(process.cwd());
 
 const API_SPECS = swaggerJsdoc(options);
 
-console.log(JSON.stringify(API_SPECS, null, 2));
+console.log("Swagger loaded");
+console.log(API_SPECS);
+console.log(process.cwd());
+console.log(__dirname);
 
 export default API_SPECS;
