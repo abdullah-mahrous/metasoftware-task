@@ -165,10 +165,10 @@ http://localhost:3000/api-docs
 
 ## Live Demo
 
-Vercel Deployment:
+Railway Deployment:
 
 ```txt
-https://metasoftware-task.vercel.app
+https://metasoftware-task-production-64e8.up.railway.app
 ```
 
 ## Author
