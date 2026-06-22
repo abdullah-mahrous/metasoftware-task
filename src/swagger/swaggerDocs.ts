@@ -20,6 +20,36 @@ const options = {
         description: "Production server",
       },
     ],
+    paths: {
+  "/api/test": {
+    get: {
+      summary: "Test endpoint",
+      tags: ["Test"],
+      responses: {
+        200: {
+          description: "Success",
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                properties: {
+                  success: {
+                    type: "boolean",
+                    example: true
+                  },
+                  message: {
+                    type: "string",
+                    example: "Swagger is working"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+},
     components: {
       securitySchemes: {
         bearerAuth: {
